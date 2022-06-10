@@ -63,6 +63,9 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    # This is the link to the GitHub issue that references the below lines (69-82): https://github.com/python-visualization/folium/issues/1223
+
     #  # get definition of map in body
     # html_map = folium_map._repr_html_() 
     # map_div = Markup(folium_map.get_root().html.render())
