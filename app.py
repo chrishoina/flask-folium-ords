@@ -58,6 +58,8 @@ def index():
 
 # For some reason, this is broken in my flask app, its no longer working. I had to move some things around when I was cleaning up. There is a good chance I didn't copy/paste something over. I compared it to previous versions (this and the .js file) but I don't see where the error/issue is. 
 
+# I found another reference in the folium github that might be good to look at too. It has to do with adding an altair chart to a pop-up. This is probably better than me explaining, since it has an actual working example: https://github.com/python-visualization/folium/issues/1239
+
 
     return folium_map._repr_html_()
 
