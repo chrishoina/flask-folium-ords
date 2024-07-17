@@ -13,27 +13,26 @@ import altair as alt
 from folium import Popup, plugins, features, JavascriptLink
 import branca
 
-
-
+folium.i
 # ------------------------------------------------------------------- #
 # I checked to make sure this runs, you should be able to, just to see what the example chart looks like. Its very generic, but the scaling/height/width/etc. can all be changed. This is what would be added to the existing marker. 
 
-# import json, requests
-# import altair as alt 
+import json, requests
+import altair as alt 
 
-# id = 4092018375
-# scores = requests.get(f"https://gf641ea24ecc468-dbmcdeebyface.adb.us-ashburn-1.oraclecloudapps.com/ords/pythondev/examscores/?q={{\"hsisid\":{id}}}").json()
+id = 4092018375
+scores = requests.get(f"https://gf641ea24ecc468-dbmcdeebyface.adb.us-ashburn-1.oraclecloudapps.com/ords/pythondev/examscores/?q={{\"hsisid\":{id}}}").json()
 
-# print(scores)
-# data = alt.Data(values=scores['items']) 
+print(scores)
+data = alt.Data(values=scores['items']) 
     
-# mychart = alt.Chart(data).mark_point().encode(
-# alt.X('date_:T', title='Time'), alt.Y('score:Q', title='Score')
-# ).properties(title='Health Scores')
+mychart = alt.Chart(data).mark_point().encode(
+alt.X('date_:T', title='Time'), alt.Y('score:Q', title='Score')
+).properties(title='Health Scores')
 
-# mychart 
+mychart.save('chart_test.html')
 
-# ------------------------------------------------------------------- #
+------------------------------------------------------------------- #
 
 app = Flask(__name__)
 
